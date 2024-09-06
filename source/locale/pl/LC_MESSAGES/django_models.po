@@ -1,0 +1,200 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django Carrots 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-23 21:43+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/django_models.rst:3
+msgid "Models"
+msgstr ""
+
+#: ../../source/django_models.rst:66
+msgid "Playing in the console"
+msgstr ""
+
+#: ../../source/django_models.rst:68
+msgid ""
+"Django provides its own console. It is a simple Python console (where we can"
+" do exactly the same thing as when you activate the command ``python``), but"
+" we can also use the tools and models of Django."
+msgstr ""
+
+#: ../../source/django_models.rst:84
+msgid "We create the first survey::"
+msgstr ""
+
+#: ../../source/django_models.rst:89
+msgid ""
+"Save the poll in the database. For this purpose, you always need to call "
+"``save()``::"
+msgstr ""
+
+#: ../../source/django_models.rst:93
+msgid "Each object in the database is assigned to a unique ID::"
+msgstr ""
+
+#: ../../source/django_models.rst:98
+msgid "``p`` is a simple object. We can read its attributes::"
+msgstr ""
+
+#: ../../source/django_models.rst:216
+msgid "Summary"
+msgstr ""
+
+#: ../../source/django_models.rst:220
+msgid "To download every object in the model::"
+msgstr ""
+
+#: ../../source/django_models.rst:224
+msgid "To download the object which satisfies the condition::"
+msgstr ""
+
+#: ../../source/django_models.rst:5
+msgid ""
+"The next step is to define the model of our application. The model describes"
+" what can be stored in the database and how. From a Python point of view, a "
+"model is a basic class which inherits from ``models.Model``."
+msgstr ""
+
+#: ../../source/django_models.rst:8
+msgid ""
+"Our application will include questions and answers, so we'll create two "
+"models: ``Poll`` and ``Choice``. The model ``Poll`` contains the content of "
+"the questions and the date of publication. The model ``Choice`` contains a "
+"reference to the relevant questions, the content of the responses and the "
+"number of votes."
+msgstr ""
+
+#: ../../source/django_models.rst:12
+msgid "In the file ``polls/models.py`` type::"
+msgstr ""
+
+#: ../../source/django_models.rst:25
+msgid ""
+"By adding new models we have changed the database schema. We need to create "
+"migration files containing instructions to add the corresponding new tables "
+"in database, using the ``makemigrations`` coammand and then execute these "
+"migrations files, using the ``migrate`` command."
+msgstr ""
+
+#: ../../source/django_models.rst:47
+msgid "We create a file ``polls/admin.py``, which includes::"
+msgstr ""
+
+#: ../../source/django_models.rst:55
+msgid ""
+"Now, the ``Poll`` and ``Choice`` models will be available from the "
+"administration panel."
+msgstr ""
+
+#: ../../source/django_models.rst:59
+msgid ""
+"Some changes require a server restart. In the console with the server "
+"running, do ``Ctrl+C`` and then ``python manage.py runserver`` again."
+msgstr ""
+
+#: ../../source/django_models.rst:62
+msgid ""
+"When we go back to ``http://localhost:8000/admin/`` we will see that a new "
+"bookmark ``Polls`` has appeared."
+msgstr ""
+
+#: ../../source/django_models.rst:75
+msgid "Once you are in the shell, type::"
+msgstr ""
+
+#: ../../source/django_models.rst:79
+msgid ""
+"All the surveys are the database, there's nothing here, so we get an empty "
+"list::"
+msgstr ""
+
+#: ../../source/django_models.rst:105
+msgid ""
+"After changing the attributes we again call ``save()`` to save changes::"
+msgstr ""
+
+#: ../../source/django_models.rst:115
+msgid ""
+"Django models are classes, which can define methods. A method is a function "
+"that gets an extra parameter ``self``, which is the current object (e.g. the"
+" current questionnaire). Methods in classes ( models) allow you to add "
+"additional behaviors or change the existing ones."
+msgstr ""
+
+#: ../../source/django_models.rst:119
+msgid ""
+"One of the methods is ``__str__()``, which allows you to change the display "
+"of the model (a questionnaire or a question). ``<Poll: Poll object>`` "
+"doesn’t tell us much. Let's fix that by adding the method ``__str__`` to "
+"``Poll`` and ``Choice``::"
+msgstr ""
+
+#: ../../source/django_models.rst:133
+msgid ""
+"Django will use these methods for displaying objects, not just in the "
+"console but also in the administration interface."
+msgstr ""
+
+#: ../../source/django_models.rst:135
+msgid ""
+"We can also add other methods.  In ``carrots/polls/models.py``, append the "
+"following (comments ``#...`` mean the code located in the file)::"
+msgstr ""
+
+#: ../../source/django_models.rst:145
+msgid ""
+"Note that we had to add ``import datetime`` at the beginning of the file to "
+"use objects representing the time in Python."
+msgstr ""
+
+#: ../../source/django_models.rst:147
+msgid ""
+"Let’s save the changes and run the intepreter with the command ``python "
+"manage.py shell`` once again::"
+msgstr ""
+
+#: ../../source/django_models.rst:155
+msgid ""
+"Until now, we have used the method ``all`` to get a list of all objects of a"
+" defined type (e.g. all questions). There are other methods that allow us to"
+" find objects that meet certain conditions:"
+msgstr ""
+
+#: ../../source/django_models.rst:181
+msgid "We can also have access to the answers (``Choice``):"
+msgstr ""
+
+#: ../../source/django_models.rst:218
+msgid ""
+"We create models by defining classes inheriting from ``models.Model`` in "
+"``polls/models.py`` file."
+msgstr ""
+
+#: ../../source/django_models.rst:219
+msgid ""
+"After creating a new model, we have to remember to run ``python manage.py "
+"makemigrations`` and ``python manage.py migrate``."
+msgstr ""
+
+#: ../../source/django_models.rst:228
+msgid "To download a single object::"
+msgstr ""
+
+#: ../../source/django_models.rst:45
+msgid ""
+"That’s it! However, probably we would like to be able to edit objects. The "
+"easiest way is to do it in the administration panel."
+msgstr ""
+
+#: ../../source/django_models.rst:110
+msgid ""
+"``Poll.objects.all()`` returns a list of all the objects in the database::"
+msgstr ""

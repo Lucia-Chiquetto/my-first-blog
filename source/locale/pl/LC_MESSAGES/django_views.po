@@ -1,0 +1,367 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Django Carrots 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-23 21:43+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/django_views.rst:3
+msgid "Rendering websites"
+msgstr ""
+
+#: ../../source/django_views.rst:41
+msgid "First view"
+msgstr ""
+
+#: ../../source/django_views.rst:74
+msgid "View that really does something"
+msgstr ""
+
+#: ../../source/django_views.rst:76
+msgid "For now our views don’t do much. Let's give them some work!"
+msgstr ""
+
+#: ../../source/django_views.rst:83 ../../source/django_views.rst:107
+msgid "At the beginning of the ``polls/views.py`` file append::"
+msgstr ""
+
+#: ../../source/django_views.rst:88
+msgid "Expand function ``index`` to look as below:"
+msgstr ""
+
+#: ../../source/django_views.rst:105
+msgid ""
+"Django programmers thought about it and decided to create a system of "
+"templates:"
+msgstr ""
+
+#: ../../source/django_views.rst:132
+msgid ""
+"Oops! Well, we still haven’t added the template. To do this, let's create a "
+"file ``polls/templates/polls/index.html`` and add to it:"
+msgstr ""
+
+#: ../../source/django_views.rst:149
+msgid ""
+"When you reload the page in a browser you should see a list of all the polls"
+" created earlier."
+msgstr ""
+
+#: ../../source/django_views.rst:153
+msgid ""
+"If you refresh the page and you still see an error, you must restart the "
+"server. In the console where the server is running press ``Ctrl + C`` and "
+"execute ``python manage.py runserver`` again. It should work now."
+msgstr ""
+
+#: ../../source/django_views.rst:180
+msgid "Returning 404 code"
+msgstr ""
+
+#: ../../source/django_views.rst:182
+msgid ""
+"Now let’s focus on the view of the poll details – a site which displays "
+"questions from a defined questionnaire."
+msgstr ""
+
+#: ../../source/django_views.rst:220
+msgid "Form management"
+msgstr ""
+
+#: ../../source/django_views.rst:294
+msgid "Correct ``results function``, as below::"
+msgstr ""
+
+#: ../../source/django_views.rst:318
+msgid "``polls/views.py``"
+msgstr ""
+
+#: ../../source/django_views.rst:368
+msgid "``urls.py``"
+msgstr ""
+
+#: ../../source/django_views.rst:385
+msgid "``polls/models.py``"
+msgstr ""
+
+#: ../../source/django_views.rst:8
+msgid ""
+"It's good to start working on a new website after preparing a plan for URLs "
+"(addresses). We know we will want to see a list of all the questionnaires on"
+" the site, let users vote and display the aggregated results of the "
+"questionnaire."
+msgstr ""
+
+#: ../../source/django_views.rst:12
+msgid ""
+"Let's open the file ``urls.py`` again and add four new entries. Eventually "
+"the file should look like this::"
+msgstr ""
+
+#: ../../source/django_views.rst:43
+msgid ""
+"Ok, let's see how it works in practice. Unfortunately, entering the address "
+"``http://localhost:8000/polls/1/`` does not end well::"
+msgstr ""
+
+#: ../../source/django_views.rst:48
+msgid ""
+"This is because we have not defined the view yet (Django tells us that it "
+"was looking for ``polls.views. detail``, unfortunately without any success)."
+msgstr ""
+
+#: ../../source/django_views.rst:51
+msgid "Let’s open the file ``polls/views.py`` and add a few new features::"
+msgstr ""
+
+#: ../../source/django_views.rst:67
+msgid ""
+"These are the simplest possible views. They do not return regular strings, "
+"like the function that builds the Christmas tree in Python, because they "
+"have to speak in HTTP protocol, which is a bit more complicated (Here it "
+"would be interesting to see in a browser, what's going on when you enter the"
+" address ``http://localhost:8000/polls/1/``)."
+msgstr ""
+
+#: ../../source/django_views.rst:78
+msgid ""
+"Everything Django needs from the view is a `HttpResponse "
+"<https://docs.djangoproject.com/en/3.0/ref/request-"
+"response/#django.http.HttpResponse>`_ object or a thrown exception. All the "
+"rest is under our control. For example, we can use the functions that we "
+"learned in the interactive mode to display all the polls for the user."
+msgstr ""
+
+#: ../../source/django_views.rst:99
+msgid ""
+"We do not want to display the entire content of the file as it would be too "
+"long. Only the most important changes should be reported."
+msgstr ""
+
+#: ../../source/django_views.rst:101
+msgid ""
+"It works! There is only one problem with this example: we define in the view"
+" not only what has to be returned, but also in what format it should be "
+"returned to the site user. One of the most important skills of a programmer "
+"is the ability to distinguish and divide those two independent things."
+msgstr ""
+
+#: ../../source/django_views.rst:111
+msgid "This will let us use the template system."
+msgstr ""
+
+#: ../../source/django_views.rst:113
+msgid "In the same file, expand the function ``index`` into this::"
+msgstr ""
+
+#: ../../source/django_views.rst:123
+msgid ""
+"The functions ``get_template`` (it finds a template) and ``render`` (it "
+"changes the template into a text to be delivered to the user) are "
+"responsible for our template handling."
+msgstr ""
+
+#: ../../source/django_views.rst:126
+msgid ""
+"The code is a bit longer, but we will see soon that everything is much "
+"clearer. First, let’s load the page ``http://localhost:8000/polls/`` to see "
+"the result of our work::"
+msgstr ""
+
+#: ../../source/django_views.rst:147
+msgid ""
+"Application ``templates`` are located in the directory ``templates of "
+"applications`` and the function ``get_template`` searches templates in these"
+" directories, that is why we didn’t have to give the entire path "
+"``polls/templates/polls/index.html``, ``polls/index.html.`` was enough."
+msgstr ""
+
+#: ../../source/django_views.rst:157
+msgid ""
+"HTML and CSS are the formats that define the appearance of web pages. We "
+"will use Django templates to generate the HTML code. A good description of "
+"HTML is in the book `Interactive Data Visualization for the Web "
+"<http://shop.oreilly.com/product/0636920026938.do>`_. The incredible "
+"characteristics of the Web is that HTML and CSS codes of every site are "
+"public. We recommend to look at the code of your favorite sites."
+msgstr ""
+
+#: ../../source/django_views.rst:161
+msgid ""
+"In almost every view, you will eventually need to use a template. Therefore,"
+" in Django there is a function ``render`` which allows you to do this in a "
+"shorter way:"
+msgstr ""
+
+#: ../../source/django_views.rst:164
+msgid ""
+"Please correct the beginning of the file ``polls/views.py`` to look like "
+"this::"
+msgstr ""
+
+#: ../../source/django_views.rst:169
+msgid "Please correct the ``index`` function to look like this::"
+msgstr ""
+
+#: ../../source/django_views.rst:185
+msgid "At the beginning of the file ``polls/views.py``, append::"
+msgstr ""
+
+#: ../../source/django_views.rst:189
+msgid ""
+"``Http404`` is an exception shared by Django. We can use this exception in "
+"case our application can’t find the poll desired by the user (by writing "
+"``raise Http404``). As a result, the browser will show the error 404 page."
+msgstr ""
+
+#: ../../source/django_views.rst:196
+msgid ""
+"You can change the page displayed by Django in case of the error 404 (the "
+"page does not exist) and 500 (unexpected server error). To do this, you need"
+" to create templates ``polls/templates/404.html`` and "
+"``polls/templates/500.html``. Before checking if it works, change the "
+"``settings.py`` file params: ``DEBUG`` to ``False`` and ``ALLOWED_HOSTS`` to"
+" ``['*']``. Otherwise, Django will continue to display its auxiliary yellow "
+"pages or even won't start at all."
+msgstr ""
+
+#: ../../source/django_views.rst:198
+msgid "Change the function ``detail`` as below::"
+msgstr ""
+
+#: ../../source/django_views.rst:207
+msgid ""
+"Then create the ``polls/templates/polls/detail.html`` file with content as "
+"below:"
+msgstr ""
+
+#: ../../source/django_views.rst:222
+msgid ""
+"Let's change the template ``polls/templates/polls/details.html`` by adding a"
+" simple HTML form."
+msgstr ""
+
+#: ../../source/django_views.rst:224
+msgid "Change the file ``polls/templates/polls/details.html`` as below:"
+msgstr ""
+
+#: ../../source/django_views.rst:243
+msgid ""
+"``{% csrf_token %}`` is a very magical way to protect websites from new "
+"forms of attack on websites users. You can find more information in the "
+"documentation `Cross Site Request Forgery protection "
+"<https://docs.djangoproject.com/en/3.0/ref/csrf/>`_."
+msgstr ""
+
+#: ../../source/django_views.rst:246
+msgid ""
+"Attentive readers will note that the form is sent to the ``/polls/{{ poll.id"
+" }}/vote/`` address, which does not yet support data from forms. Let's add "
+"support for forms."
+msgstr ""
+
+#: ../../source/django_views.rst:249
+msgid "At the beginning of the file ``polls/views.py`` append::"
+msgstr ""
+
+#: ../../source/django_views.rst:256
+msgid "Correct the function ``vote`` as below::"
+msgstr ""
+
+#: ../../source/django_views.rst:275
+msgid "In the view there are a lot of new ideas we have not yet discussed."
+msgstr ""
+
+#: ../../source/django_views.rst:277
+msgid ""
+"The ``request`` object contains the data sent by the user, and "
+"``request.POST`` contains the form data sent by the user. This lets us know "
+"which option was selected."
+msgstr ""
+
+#: ../../source/django_views.rst:279
+msgid ""
+"Here comes the important question: it may turn out that the view received a "
+"nonexistent answer. We always have to check the data received from the user "
+"and respond to a situation when the data does not make sense. This is what "
+"happens in the :keyword:`except` clause. In such a case, we redirect the "
+"user to the questionnaire and display the error."
+msgstr ""
+
+#: ../../source/django_views.rst:284
+msgid ""
+"If the user selects the correct option, we can increase the number of votes "
+"and save the changes. Then, we redirect to the view of the questionnaire "
+"details we wrote previously by using ``HttpResponseRedirect``."
+msgstr ""
+
+#: ../../source/django_views.rst:287
+msgid ""
+"Another important issue: after voting, we could just display the page, like "
+"at the end of the view of details (by using render). Unfortunately this "
+"could lead to  resending of the questionnaire if the user starts playing "
+"with the back and forward buttons in the browser, or just refreshes the page"
+" (by pressing F5). To prevent this, we should always redirect with "
+"HttpResponseRedirect after the correct form is submitted (in this case, "
+"voting for a poll)."
+msgstr ""
+
+#: ../../source/django_views.rst:292
+msgid ""
+"At the end we still have to develop a view of the poll results to display "
+"after voting."
+msgstr ""
+
+#: ../../source/django_views.rst:300
+msgid ""
+"Create the file ``polls/templates/polls/results.html`` with the following "
+"content:"
+msgstr ""
+
+#: ../../source/django_views.rst:314
+msgid ""
+"That's it! Enter the address ``http://localhost:8000/admin/`` and create "
+"several new polls and questions. Then play with voting on them and invite "
+"others to do the same."
+msgstr ""
+
+#: ../../source/django_views.rst:5
+msgid ""
+"Navigating to the main address ``http://localhost:8000/`` still displays "
+"just congratulations page. We can't have only that!"
+msgstr ""
+
+#: ../../source/django_views.rst:26
+msgid ""
+"Let's look at this example again. Each ``urlpatterns`` list element "
+"determines one URL pattern (address)."
+msgstr ""
+
+#: ../../source/django_views.rst:28
+msgid ""
+"When a user tries to enter a specific address on our website, such as: "
+"``http://localhost:8000/polls/1/``, Django selects the third part of the URL"
+" after the slash (in this case, ``polls/1/``) and tries to match the "
+"``urlpatterns``. Let's look at an example of such expressions::"
+msgstr ""
+
+#: ../../source/django_views.rst:33
+msgid ""
+"This is a normal string (except for the initial ``r``, which is used here "
+"only for convenience). Now do you see that our sample phrase matches "
+"``polls/1/?`` Why?"
+msgstr ""
+
+#: ../../source/django_views.rst:36
+msgid ""
+"Once Django finds a match, it will look at the second argument of the "
+"``path()``. It defines the view, which is called to create the site for the "
+"user. For ``polls/1/`` it will be ``polls.views.detail``. All named "
+"parameters will be transferred to the view as arguments of the same name."
+msgstr ""
