@@ -1,58 +1,70 @@
-========================
-Django Carrots tutorials
-========================
+Django Tutorials 🐍
+===================
 
-Tutorials walking new programmers through the process of building
-their first website in Python and Django.
-
-Loose outline
-
-#. Installing Python and setting up development environment
-#. Python basics
-#. "Snakes!" online competition
-#. Creating a polling application in Django
-#. Deploying the application
+🚀 A step-by-step guide for new programmers to build their first website using Python & Django!
 
 
-Build instructions
-==================
+📌 What You’ll Learn
+--------------------
 
-Just run::
-
-    $ pip install -r requirements.txt
-    $ make html
-
-Documentation should be created in ``build/html`` directory.
-
-Print version
--------------
-
-For print version you will need XeTeX engine (because PDFLatex doesn't support
-Unicode, go figure)::
-
-    $ make latex
-    $ cd build\latex
-
-    # Open workshops.tex and remove '\DeclareCharacter' directive
-    $ xelatex workshops.tex
+- **Setting up Python & the development environment**  
+- **Python basics & "Snakes!" online competition** 🏆🐍  
+- **Building a polling application with Django** 🎭  
+- **Deploying your first web application** 🚀  
 
 
-Why Python 3?
-=============
 
-Because it's the future. Also, Python 3 makes it possible to skip the
-whole section of the tutorial describing Unicode and character
-encodings in general. There is no use in scaring newbies from the
-start.
+🛠 Build Instructions
+---------------------
+
+1️⃣ **Install dependencies:**  
+
+.. code-block:: sh
+
+    pip install -r requirements.txt
+
+2️⃣ **Generate documentation:**  
+
+.. code-block:: sh
+
+    make html
+
+📂 The documentation will be created in the `build/html` directory.  
 
 
-Contributing
-============
 
-Please do!
+🖨️ Print Version
+-----------------
 
-Django Carrots guides and related software are free works: you can
-redistribute them and/or modify them under the terms of the GNU
-General Public License as published by the Free Software Foundation
-version 3 with the additional attribution requirements. See
-``LICENSE`` file at the root of the source directory for details.
+To generate a printable version, you'll need the **XeTeX engine**:  
+
+.. code-block:: sh
+
+    make latex
+    cd build/latex
+
+📝 **Edit `workshops.tex` and remove the `\DeclareCharacter` directive**, then run:  
+
+.. code-block:: sh
+
+    xelatex workshops.tex
+
+
+
+🤔 Why Python 3?
+----------------
+
+🚀 **Because it’s the future!**  
+Python 3 simplifies the learning process by **eliminating complex Unicode and character encoding issues**, making it easier for beginners to focus on coding.  
+
+🤝 Contributing
+--------------
+
+💡 **Want to help?** Contributions are always welcome!  
+
+Django guides and related software are **free works** under the **GNU General Public License v3**, with additional attribution requirements. See the **LICENSE** file for more details.  
+
+----------------
+
+
+✨🐍🚀  
